@@ -11,7 +11,6 @@ h2, h3 {
 }
 body {
   margin: 2em;
-
 }
 body, input[type="text"], button {
   color: #333;
@@ -23,24 +22,35 @@ nav a {
   text-decoration: none;
   margin-top: 10px;
   display: inline-block;
-  background-color: #eee;
+  background-color:white;
   border: 1px solid black;
 }
 nav a:first-of-type{
   border-right: none;
 }
 nav a:visited, a:link {
-  color:white;
-  background-color: #039be5;
-}
-nav a:hover {
-  color: #039be5;
+  color:#039be5;
   background-color: white;
 }
-nav a.active {
-  color: #039be5;
+nav a:hover {
+  color: white;
+  background-color: #039be5;
 }
-
+nav a:active{
+  color: purple;
+  background-color: #039be5;
+}
+#nav_bar{
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid grey;
+  justify-content: space-between;
+  align-items: center;
+}
+.active{
+  color: white;
+  background-color: #039be5;
+}
 
 /* everywhere else */
 * {
