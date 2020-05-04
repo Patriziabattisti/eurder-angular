@@ -24,14 +24,18 @@ nav a {
   margin-top: 10px;
   display: inline-block;
   background-color: #eee;
-  border-radius: 4px;
+  border: 1px solid black;
+}
+nav a:first-of-type{
+  border-right: none;
 }
 nav a:visited, a:link {
-  color: #334953;
+  color:white;
+  background-color: #039be5;
 }
 nav a:hover {
   color: #039be5;
-  background-color: #cfd8dc;
+  background-color: white;
 }
 nav a.active {
   color: #039be5;
