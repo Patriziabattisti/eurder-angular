@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Item} from '../item';
+import {ItemService} from '../item.service';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-items',
@@ -9,10 +11,31 @@ import {Item} from '../item';
 export class ItemsComponent implements OnInit {
   items: Item[];
 
-  constructor() {
+  constructor(private itemService: ItemService, private location: Location) {
   }
 
   ngOnInit(): void {
+    this.getItems();
   }
 
+  getItems(): void {
+    this.itemService.getItems().subscribe(items => this.items = items);
+  }
+
+  goBack(): void {
+    this.location.back();
+  }
+
+
+  add(name: string, description: string, price: number): void {
+    name = name.trim();
+    description = description.trim();
+    if (!name) {
+      return;
+    }
+    this.itemService.addItem({name, description, price} as Item).subscribe(item => {
+      this.items.push(item);
+    });
+
+  }
 }
