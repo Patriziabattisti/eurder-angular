@@ -27,13 +27,13 @@ export class ItemsComponent implements OnInit {
   }
 
 
-  add(name: string, description: string, price: number): void {
+  add(name: string, description: string, price: number, amountOfStock: number): void {
     name = name.trim();
     description = description.trim();
     if (!name) {
       return;
     }
-    this.itemService.addItem({name, description, price} as Item).subscribe(item => {
+    this.itemService.addItem({name, description, price, amountOfStock} as Item).subscribe(item => {
       this.items.push(item);
     });
 
