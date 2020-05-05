@@ -1,15 +1,37 @@
-<div *ngIf="item">
+<div *ngIf="item" id="item_form">
 
-  <h2>{{item.name | uppercase}} Details</h2>
-  <div><span>Item: </span>{{item.id}}</div>
-  <div>
-    <label>Name:
-      <input [(ngModel)]="item.name" placeholder="name"/>
-    </label>
+  <div class="item_field">
+    <span>Item </span>{{item.id}}
   </div>
-  <div>Description: {{item.description}}</div>
-  <div>Price: {{item.price}}</div>
-  <div>Amount of stock: {{item.amountOfStock}}</div>
 
+  <div class="item_field">
+    <label for="item_name">Name</label>
+    <input [(ngModel)]="item.name" placeholder="name" id="item_name"/>
+  </div>
+
+  <div class="item_field">
+    <label for="item_description">Description</label>
+    <input [(ngModel)]="item.description" placeholder="description" id="item_description" />
+  </div>
+
+  <div class="item_field">
+    <label for="item_price">Price</label>
+
+    <div>
+      <span class="price_tag">€</span>
+      <input [(ngModel)]="item.price" placeholder="price" id="item_price" type="number" />
+    </div>
+
+  </div>
+
+  <div class="item_field">
+    <label for="item_amount">Amount of stock</label>
+    <input [(ngModel)]="item.amountOfStock" placeholder="amountOfStock" id="item_amount" type="number"/>
+  </div>
+
+  <div class="button_field">
+    <button class="update_button">UPDATE</button>
+    <button class="cancel_button">CANCEL</button>
+  </div>
 </div>
 

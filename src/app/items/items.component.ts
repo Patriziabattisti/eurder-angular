@@ -30,7 +30,7 @@ export class ItemsComponent implements OnInit {
   add(name: string, description: string, price: number, amountOfStock: number): void {
     name = name.trim();
     description = description.trim();
-    if (!name) {
+    if (!name || price < 0 || amountOfStock < 0) {
       return;
     }
     this.itemService.addItem({name, description, price, amountOfStock} as Item).subscribe(item => {

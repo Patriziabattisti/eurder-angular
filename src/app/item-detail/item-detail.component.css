@@ -1,0 +1,52 @@
+#item_form{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+}
+#item_form .item_field {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+
+}
+
+#item_form .item_field label{
+  color: darkgrey;
+}
+#item_form .item_field div{
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+.price_tag{
+  width:1.3em;
+  height: 1.3em;
+  background-color: lightgray;
+  text-align: center;
+  padding: 0.5px;
+}
+.button_field{
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+.button_field button{
+  font-size: large;
+  border: 1px solid black;
+  border-radius: 6px;
+}
+.update_button{
+  background-color: #879e36;
+  color:white;
+  width:65%;
+  height:100%;
+}
+.cancel_button{
+  width: 30%;
+}
