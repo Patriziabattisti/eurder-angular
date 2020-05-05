@@ -47,7 +47,7 @@ nav a:active{
   justify-content: space-between;
   align-items: center;
 }
-.active{
+#nav_bar .active{
   color: white;
   background-color: #039be5;
 }

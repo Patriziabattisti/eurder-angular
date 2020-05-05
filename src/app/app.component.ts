@@ -9,15 +9,12 @@ import {Component} from '@angular/core';
 export class AppComponent {
   title = 'Eurder';
 
-  changeColor() {
+  changeColor(name: string) {
+    const monA = document.getElementById(name);
+    const maNav = document.querySelectorAll('a');
 
-    let pathName = location.href;
-    let index = pathName.lastIndexOf('/') + 1;
-    let nameOfNav = pathName.substr(index);
-    console.log(nameOfNav);
-    let monA = document.getElementById(nameOfNav);
-    monA.className = 'active';
+    maNav.forEach(el => el.classList.remove('active'));
 
-    console.log(monA.className);
+    monA.classList.toggle('active');
   }
 }

@@ -1,8 +1,8 @@
 <div id="nav_bar">
   <h1>{{title}}</h1>
   <nav>
-    <a id="dashboard" routerLink="/dashboard" (click)="changeColor()">Home</a>
-    <a id="items" routerLink="/items" (click)="changeColor()">Items</a>
+    <a id="dashboard" routerLink="/dashboard" (click)="changeColor('dashboard')">Home</a>
+    <a id="items" routerLink="/items" (click)="changeColor('items')">Items</a>
   </nav>
 </div>
 <router-outlet></router-outlet>
