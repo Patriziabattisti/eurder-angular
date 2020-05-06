@@ -1,38 +1,38 @@
-<div *ngIf="item" class="item_form">
+<form *ngIf="item" class="item_form" #itemForm="ngForm">
 
   <div class="item_field" >
     <span>Item </span>
     <p>{{item.id}}</p>
   </div>
 
-  <div class="item_field">
+  <div class="item_field form-group">
     <label for="item_name">Name</label>
-    <input [(ngModel)]="item.name" placeholder="name" id="item_name"/>
+    <input [(ngModel)]="item.name" placeholder="name" id="item_name" class="form-control" name="name"/>
   </div>
 
-  <div class="item_field">
+  <div class="item_field form-group">
     <label for="item_description">Description</label>
-    <input [(ngModel)]="item.description" placeholder="description" id="item_description" />
+    <input [(ngModel)]="item.description" placeholder="description" id="item_description"class="form-control" name="description" />
   </div>
 
-  <div class="item_field">
+  <div class="item_field form-group">
     <label for="item_price">Price</label>
 
     <div>
       <span class="price_tag">€</span>
-      <input [(ngModel)]="item.price" placeholder="price" id="item_price" type="number" />
+      <input [(ngModel)]="item.price" placeholder="price" id="item_price" type="number"class="form-control" name="price" />
     </div>
 
   </div>
 
-  <div class="item_field">
+  <div class="item_field form-group">
     <label for="item_amount">Amount of stock</label>
-    <input [(ngModel)]="item.amountOfStock" placeholder="amountOfStock" id="item_amount" type="number"/>
+    <input [(ngModel)]="item.amountOfStock" placeholder="amountOfStock" id="item_amount" type="number" class="form-control" name="amountOfStock"/>
   </div>
 
   <div class="button_field">
     <button class="update_button">UPDATE</button>
     <button class="cancel_button">CANCEL</button>
   </div>
-</div>
+</form>
 
