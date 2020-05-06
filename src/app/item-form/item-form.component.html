@@ -1,0 +1,32 @@
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)" class="item_form">
+  <div class="item_field">
+    <label for="name">
+      Name
+    </label>
+    <input id="name" type="text" formControlName="name">
+  </div>
+  <div class="item_field">
+    <label for="description">
+      Description
+    </label>
+    <input id="description" type="text" formControlName="description">
+  </div>
+  <div class="item_field">
+    <label for="price">
+      Price
+    </label>
+    <input id="price" type="number" formControlName="price">
+  </div>
+  <div class="item_field">
+    <label for="amountOfStock">
+      Amount
+    </label>
+    <input id="amountOfStock" type="number" formControlName="amountOfStock">
+  </div>
+
+  <div class="button_field">
+    <button class="button create_button" type="submit">CREATE</button>
+    <button class="cancel_button" type="reset">CANCEL</button>
+  </div>
+</form>
