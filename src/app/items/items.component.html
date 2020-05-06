@@ -7,23 +7,6 @@
   </li>
 </ul>
 
-<div>
-  <label>Name:
-    <input #itemName />
-  </label>
-  <label>Description:
-    <input #itemDescription/>
-  </label>
-  <label>Price:
-  <input type="number" #itemPrice/>
-  </label>
-  <label>Amount of stock:
-    <input type="number" #itemAmount/>
-  </label>
-  <!-- (click) passes input value to add() and then clears the input -->
-  <button (click)="add(itemName.value,itemDescription.value,+itemPrice.value,+itemAmount.value); itemName.value=''">
-    add
-  </button>
-</div>
+
 
 

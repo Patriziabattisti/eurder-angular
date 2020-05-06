@@ -1,10 +1,19 @@
 <div id="nav_bar">
-  <h1>{{title}}</h1>
+
+  <div id="title_logo">
+    <img src="../assets/logo.svg">
+    <h1>{{title}}</h1>
+  </div>
+
   <nav>
     <a id="dashboard" routerLink="/dashboard" (click)="changeColor('dashboard')">Home</a>
     <a id="items" routerLink="/items" (click)="changeColor('items')">Items</a>
+    <a id="createItem" routerLink="/createItem" (click)="changeColor('createItem')">Create Item</a>
+
   </nav>
+
 </div>
+
 <router-outlet></router-outlet>
 
 

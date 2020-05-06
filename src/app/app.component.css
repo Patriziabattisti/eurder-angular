@@ -51,7 +51,16 @@ nav a:active{
   color: white;
   background-color: #039be5;
 }
-
+#title_logo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#nav_bar img{
+  width: 10vw;
+  height: 10vh;
+}
 /* everywhere else */
 * {
   font-family: Arial, Helvetica, sans-serif;

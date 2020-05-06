@@ -1,9 +1,9 @@
-#item_form{
+.item_form{
   display: flex;
   flex-direction: column;
   justify-content:space-between;
 }
-#item_form .item_field {
+.item_form .item_field {
   width: 100%;
   padding: 5px;
   display: flex;
@@ -12,10 +12,10 @@
 
 }
 
-#item_form .item_field label{
+.item_form .item_field label{
   color: darkgrey;
 }
-#item_form .item_field div{
+.item_form .item_field div{
   padding: 5px;
   display: flex;
   flex-direction: row;
@@ -28,6 +28,20 @@
   background-color: lightgray;
   text-align: center;
   padding: 0.5px;
+}
+.item_form .item_field:first-of-type{
+  color: darkgray;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid grey;
+}
+.item_field:first-of-type span{
+  color: black;
+  width:5%;
+}
+.item_field:first-of-type p{
+  width: 100%;
 }
 .button_field{
   height: 50px;
