@@ -28,4 +28,9 @@ export class ItemService {
   addItem(item: Item): Observable<Item> {
     return this.http.post<Item>(this.itemsUrl, item, this.httpOptions);
   }
+
+  updateItem(item: Item): Observable<any> {
+    const url = `${this.itemsUrl}/${item.id}`;
+    return this.http.put(url, item, this.httpOptions);
+  }
 }

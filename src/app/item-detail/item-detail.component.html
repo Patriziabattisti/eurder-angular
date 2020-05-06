@@ -1,4 +1,4 @@
-<form *ngIf="item" class="item_form" #itemForm="ngForm">
+<form *ngIf="item" class="item_form" #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm.value)">
 
   <div class="item_field" >
     <span>Item </span>
@@ -31,8 +31,8 @@
   </div>
 
   <div class="button_field">
-    <button class="update_button">UPDATE</button>
-    <button class="cancel_button">CANCEL</button>
+    <button class="button update_button" type="submit">UPDATE</button>
+    <button class="button cancel_button" type="reset">CANCEL</button>
   </div>
 </form>
 

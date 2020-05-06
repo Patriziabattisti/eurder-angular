@@ -16,6 +16,7 @@ export class ItemDetailComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private itemService: ItemService, private location: Location, private formBuilder: FormBuilder) {
   }
+
   ngOnInit(): void {
     this.getItem();
 
@@ -27,12 +28,11 @@ export class ItemDetailComponent implements OnInit {
   }
 
   onSubmit(itemData) {
-    console.log(itemData);
     itemData.name = itemData.name.trim();
-
+    itemData.id = this.item.id;
     if (!itemData.name || itemData.price < 0 || itemData.amountOfStock < 0) {
       return;
     }
-    // need to implement the update method
+    this.itemService.updateItem(itemData).subscribe();
   }
 }
