@@ -30,3 +30,9 @@
     <button class="cancel_button" type="reset">CANCEL</button>
   </div>
 </form>
+
+<div class="d-flex justify-content-center" *ngIf="message && message!==''">
+  <div class="spinner-border" role="status">
+    <span class="sr-only">{{message}}</span>
+  </div>
+</div>

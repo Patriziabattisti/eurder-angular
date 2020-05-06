@@ -1,11 +1,30 @@
 <h2>Items</h2>
+<table class="table table-striped">
+  <thead>
+  <tr>
 
-<ul class="items">
-  <li *ngFor="let item of items" >
-    <a routerLink="/detail/{{item.id}}">{{item.name}}
-    </a>
-  </li>
-</ul>
+    <th scope="col">Name</th>
+    <th scope="col">Price</th>
+    <th scope="col">Amount of Stock</th>
+    <th scope="col">Status</th>
+    <th scope="col">Details</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of items;">
+
+    <td>
+      <img src="../../assets/bookIcon.svg" class="mr-2" style="width: 20px">
+      {{ item.name }}
+    </td>
+    <td>{{ item.price | number }}</td>
+    <td>{{ item.amountOfStock | number }}</td>
+    <td>{{item.stockUrgency}}</td>
+    <td><a routerLink="/detail/{{item.id}}" class="btn btn-primary">Go</a></td>
+  </tr>
+  </tbody>
+</table>
+
 
 
 

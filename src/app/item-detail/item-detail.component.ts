@@ -3,7 +3,6 @@ import {Item} from '../item';
 import {ActivatedRoute} from '@angular/router';
 import {Location} from '@angular/common';
 import {FormBuilder, FormControl} from '@angular/forms';
-
 import {ItemService} from '../item.service';
 
 @Component({
@@ -14,7 +13,10 @@ import {ItemService} from '../item.service';
 export class ItemDetailComponent implements OnInit {
   @Input() item: Item;
 
-  constructor(private route: ActivatedRoute, private itemService: ItemService, private location: Location, private formBuilder: FormBuilder) {
+  constructor(private route: ActivatedRoute,
+              private itemService: ItemService,
+              private location: Location,
+              private formBuilder: FormBuilder) {
   }
 
   ngOnInit(): void {

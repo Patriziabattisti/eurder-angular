@@ -1,0 +1,18 @@
+/*<div class="content">
+                    <app-navbar></app-navbar>
+                                  <router-outlet></router-outlet>
+                                                   </div>
+                                                     <footer class="footer bg-light text-muted text-center p-2 mt-5">---- Örder ----</footer>
+html, body,app-root {
+  height: 100%;
+}
+body,app-root {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex-shrink: 0;
+}*/

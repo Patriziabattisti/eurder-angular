@@ -6,6 +6,7 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {ItemFormComponent} from './item-form/item-form.component';
 
 
+
 const routes: Routes = [
   {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
   {path: 'items', component: ItemsComponent},
@@ -21,3 +22,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule {
 }
+

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Item} from '../item';
 import {ItemService} from '../item.service';
 import {FormBuilder} from '@angular/forms';
@@ -9,6 +9,8 @@ import {FormBuilder} from '@angular/forms';
   styleUrls: ['./item-form.component.css']
 })
 export class ItemFormComponent implements OnInit {
+  @Input() message = '';
+
   items: Item[];
   checkoutForm;
 
@@ -24,16 +26,23 @@ export class ItemFormComponent implements OnInit {
     this.itemService.getItems().subscribe(items => this.items = items);
   }
 
-  onSubmit(itemData) {
-    this.checkoutForm.reset();
-    console.log(itemData);
+  async onSubmit(itemData) {
     itemData.name = itemData.name.trim();
-
+    this.message = 'Creating';
     if (!itemData.name || itemData.price < 0 || itemData.amountOfStock < 0) {
       return;
     }
+
     this.itemService.addItem(itemData).subscribe(item => {
       this.items.push(item);
     });
+    await this.sleep(1000);
+    this.checkoutForm.reset();
+    this.message = '';
+  }
+
+
+  sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
   }
 }
