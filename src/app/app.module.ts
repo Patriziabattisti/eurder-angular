@@ -11,6 +11,7 @@ import {ItemDetailComponent} from './item-detail/item-detail.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ItemFormComponent } from './item-form/item-form.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CustomersComponent } from './customers/customers.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ItemsComponent,
     ItemDetailComponent,
     DashboardComponent,
-    ItemFormComponent
+    ItemFormComponent,
+    CustomersComponent
   ],
     imports: [
         BrowserModule,
