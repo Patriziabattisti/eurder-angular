@@ -13,6 +13,9 @@ export class ItemFormComponent implements OnInit {
 
   items: Item[];
   checkoutForm;
+  numberOfCharacter = 255;
+  counter;
+  lengthOfDescription;
 
   constructor(private itemService: ItemService, private formBuilder: FormBuilder) {
     this.checkoutForm = this.formBuilder.group({name: '', description: '', price: '', amountOfStock: ''});
@@ -20,6 +23,7 @@ export class ItemFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.getItems();
+    this.counter = this.numberOfCharacter;
   }
 
   getItems(): void {
@@ -44,4 +48,13 @@ export class ItemFormComponent implements OnInit {
   sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
+
+  onKeyPress(evt: KeyboardEvent) {
+    /*this.lengthOfDescription = evt.target.value.length + 1;
+    // this.counter -= evt.target.value.length;
+    console.log(this.numberOfCharacter);
+    console.log(this.lengthOfDescription)
+    console.log(this.counter);*/
+  }
+
 }

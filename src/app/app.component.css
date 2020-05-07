@@ -25,9 +25,10 @@ nav a {
   display: inline-block;
   background-color:white;
   border: 1px solid black;
-}
-nav a:first-of-type{
   border-right: none;
+}
+nav a:nth-last-of-type(1){
+  border-right: 1px solid black;
 }
 nav a:visited, a:link {
   color:#039be5;

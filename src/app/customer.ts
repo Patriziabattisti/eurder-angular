@@ -1,8 +1,12 @@
+import {Email} from './email';
+import {Address} from './address';
+import {PhoneNumber} from './phoneNumber';
+
 export interface Customer {
   id: string;
   firstName: string;
   lastName: string;
-  email: string;
-  address: string;
-  phoneNumber: string;
+  email: Email;
+  address: Address;
+  phoneNumber: PhoneNumber;
 }

@@ -10,7 +10,8 @@
     <label for="description">
       Description
     </label>
-    <input id="description" type="text" formControlName="description">
+    <input id="description" type="text" formControlName="description" style="height: 20vh" (keypress)="onKeyPress($event)">
+    <p>{{counter}}/{{numberOfCharacter}}</p>
   </div>
   <div class="item_field">
     <label for="price">

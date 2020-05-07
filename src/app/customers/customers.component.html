@@ -1,1 +1,26 @@
-<p>customers works!</p>
+<h2>Customers</h2>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Name</th>
+    <th scope="col">Address</th>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let customer of customers;" >
+
+    <td>
+      <img src="../../assets/bookIcon.svg" class="mr-2" style="width: 20px">
+      {{ customer.firstName }} {{customer.lastName}}
+    </td>
+    <td>{{ customer.address }} </td>
+
+  </tr>
+  </tbody>
+</table>
+
+<div>
+  <h3>Create customer</h3>
+  <app-customer-form></app-customer-form>
+</div>

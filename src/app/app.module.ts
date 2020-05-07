@@ -12,6 +12,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ItemFormComponent } from './item-form/item-form.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CustomersComponent } from './customers/customers.component';
+import { CustomerFormComponent } from './customer-form/customer-form.component';
+import { AddressComponent } from './address/address.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { CustomersComponent } from './customers/customers.component';
     ItemDetailComponent,
     DashboardComponent,
     ItemFormComponent,
-    CustomersComponent
+    CustomersComponent,
+    CustomerFormComponent,
+    AddressComponent
   ],
     imports: [
         BrowserModule,
