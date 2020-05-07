@@ -54,9 +54,9 @@ export class CustomerFormComponent implements OnInit {
     this.newCustomer.firstName = customerData.firstName;
     this.newCustomer.lastName = customerData.lastName;
     this.newCustomer.email = customerData.email;
-    this.newCustomer.address = newAddress;
+    this.newCustomer.address = this.newAddress;
     this.newCustomer.phoneNumber = customerData.phoneNumber;
-    console.log(newAddress);
+    console.log(this.newAddress);
     // this.customerService.addCustomer(newCustomer).subscribe(customer => this.customers.push(customer));
   }
 
