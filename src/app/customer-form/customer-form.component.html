@@ -23,12 +23,12 @@
       Address
     </label>
 
-    <form id="address" [formGroup]="address">
+    <div id="address" [formGroupName]="checkoutForm" ]>
       <input id="streetName" type="text" formControlName="streetName" placeholder="Street name" >
       <input id="houseNumber" type="text" formControlName="houseNumber" placeholder="House number">
       <input id="postalCode" type="text" formControlName="postalCode" placeholder="Postal code">
       <input id="country" type="text" formControlName="country" placeholder="Country">
-    </form>
+    </div>
 
   </div>
 

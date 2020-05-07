@@ -16,22 +16,20 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 export class CustomerFormComponent implements OnInit {
   customers: Customer[];
   checkoutForm;
-  address;
   newCustomer: Customer;
   newAddress: Address;
 
   constructor(private customerService: CustomerService, private formBuilder: FormBuilder) {
-    this.address = this.formBuilder.group({
-      streetName: '',
-      houseNumber: '',
-      postalCode: '',
-      country: ''
-    });
     this.checkoutForm = this.formBuilder.group({
       firstName: '',
       lastName: '',
       email: '',
-      address: this.address,
+      address: this.formBuilder.group({
+        streetName: '',
+        houseNumber: '',
+        postalCode: '',
+        country: ''
+      }),
       phoneNumber: ''
     });
   }
@@ -56,7 +54,7 @@ export class CustomerFormComponent implements OnInit {
     this.newCustomer.email = customerData.email;
     this.newCustomer.address = this.newAddress;
     this.newCustomer.phoneNumber = customerData.phoneNumber;
-    console.log(this.newAddress);
+    // console.log(this.newAddress);
     // this.customerService.addCustomer(newCustomer).subscribe(customer => this.customers.push(customer));
   }
 
