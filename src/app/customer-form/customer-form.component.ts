@@ -44,7 +44,7 @@ export class CustomerFormComponent implements OnInit {
 
   onSubmit(customerData) {
     console.log(customerData);
-    this.newAddress.streetName = customerData.address.streetName;
+    /*this.newAddress.streetName = customerData.address.streetName;
     this.newAddress.houseNumber = customerData.address.houseNumber;
     this.newAddress.postalCode = customerData.address.postalCode;
     this.newAddress.country = customerData.address.country;
@@ -53,7 +53,7 @@ export class CustomerFormComponent implements OnInit {
     this.newCustomer.lastName = customerData.lastName;
     this.newCustomer.email = customerData.email;
     this.newCustomer.address = this.newAddress;
-    this.newCustomer.phoneNumber = customerData.phoneNumber;
+    this.newCustomer.phoneNumber = customerData.phoneNumber;*/
     // console.log(this.newAddress);
     // this.customerService.addCustomer(newCustomer).subscribe(customer => this.customers.push(customer));
   }
