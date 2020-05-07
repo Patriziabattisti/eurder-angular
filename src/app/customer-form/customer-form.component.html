@@ -1,0 +1,46 @@
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)" class="item_form">
+  <div class="item_field">
+    <label for="firstName">
+      Firstname
+    </label>
+    <input id="firstName" type="text" formControlName="firstName">
+  </div>
+  <div class="item_field">
+    <label for="lastName">
+      Lastname
+    </label>
+    <input id="lastName" type="text" formControlName="lastName">
+  </div>
+  <div class="item_field">
+    <label for="email">
+      Email
+    </label>
+    <input id="email" type="email" formControlName="email">
+  </div>
+
+  <div class="item_field" >
+    <label >
+      Address
+    </label>
+
+    <form id="address" [formGroup]="address">
+      <input id="streetName" type="text" formControlName="streetName" placeholder="Street name" >
+      <input id="houseNumber" type="text" formControlName="houseNumber" placeholder="House number">
+      <input id="postalCode" type="text" formControlName="postalCode" placeholder="Postal code">
+      <input id="country" type="text" formControlName="country" placeholder="Country">
+    </form>
+
+  </div>
+
+  <div class="item_field">
+    <label for="phoneNumber">
+      Phone number
+    </label>
+    <input id="phoneNumber" type="tel" formControlName="phoneNumber">
+  </div>
+
+  <div class="button_field">
+    <button class="button create_button" type="submit">CREATE</button>
+    <button class="cancel_button" type="reset">CANCEL</button>
+  </div>
+</form>
